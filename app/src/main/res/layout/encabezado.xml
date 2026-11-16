@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Se reutiliza en las dos pantallas; cada Activity ajusta el título y la flecha. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="68dp" android:paddingStart="18dp" android:paddingEnd="18dp" android:paddingTop="12dp" android:paddingBottom="10dp" android:gravity="center_vertical" android:orientation="horizontal">
+    <ImageButton android:id="@+id/botonVolver" android:layout_width="48dp" android:layout_height="48dp" android:background="@drawable/fondo_ocultar" android:src="@drawable/ic_atras" android:contentDescription="@string/volver_inicio" android:visibility="gone"/>
+    <ImageView android:layout_width="38dp" android:layout_height="38dp" android:src="@drawable/logo_willaricuy" android:contentDescription="@string/descripcion_logo"/>
+    <TextView android:id="@+id/tituloEncabezado" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="12dp" android:fontFamily="@font/nunito_extrabold" android:text="@string/app_name" android:textSize="17sp" android:textColor="@color/texto"/>
+    <Button android:id="@+id/botonOcultar" style="@style/BotonWillaricuy" android:layout_width="wrap_content" android:layout_height="48dp" android:minWidth="100dp" android:background="@drawable/fondo_ocultar" android:backgroundTint="@null" android:drawableStart="@drawable/ic_ocultar" android:drawablePadding="6dp" android:text="@string/ocultar" android:textSize="12sp" android:textColor="@color/coral_oscuro"/>
+</LinearLayout>

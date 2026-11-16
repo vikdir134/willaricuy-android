@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Perfil y sus ajustes. El área central se desplaza para mostrar todas las opciones. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/fondo">
+    <LinearLayout android:id="@+id/contenidoPantalla" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+        <include layout="@layout/encabezado"/>
+        <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="20dp" android:gravity="center_vertical" android:orientation="horizontal">
+                    <ImageView android:layout_width="60dp" android:layout_height="60dp" android:padding="16dp" android:src="@drawable/ic_perfil" android:background="@drawable/fondo_icono" android:importantForAccessibility="no"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="14dp" android:orientation="vertical">
+                        <TextView style="@style/TextoTitulo" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="18sp" android:text="@string/usuario_anonimo"/>
+                        <TextView style="@style/TextoCuerpo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:textSize="12sp" android:text="@string/cuenta_protegida"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="20dp" android:background="@drawable/fondo_turquesa" android:padding="20dp" android:orientation="vertical">
+                    <TextView style="@style/TextoTitulo" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/blanco" android:textSize="17sp" android:text="@string/registro_titulo"/>
+                    <TextView style="@style/TextoCuerpo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:textColor="@color/blanco" android:textSize="13sp" android:text="@string/registro_detalle"/>
+                    <Button android:id="@+id/botonRegistro" style="@style/BotonWillaricuy" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:background="@drawable/fondo_ocultar" android:backgroundTint="@null" android:textColor="@color/turquesa_oscuro" android:text="@string/registro_boton"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/filaContactos" style="@style/FilaConfiguracion">
+                    <ImageView android:layout_width="44dp" android:layout_height="44dp" android:padding="11dp" android:background="@drawable/fondo_icono" android:src="@drawable/ic_contactos" android:importantForAccessibility="no"/>
+                    <TextView android:id="@+id/textoContactos" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="14dp" android:fontFamily="@font/inter_bold" android:textColor="@color/texto" android:textSize="14sp" android:text="@string/contactos"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/filaPrivacidad" style="@style/FilaConfiguracion">
+                    <ImageView android:layout_width="44dp" android:layout_height="44dp" android:padding="11dp" android:background="@drawable/fondo_icono" android:src="@drawable/ic_privacidad" android:importantForAccessibility="no"/>
+                    <TextView android:id="@+id/textoPrivacidad" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="14dp" android:fontFamily="@font/inter_bold" android:textColor="@color/texto" android:textSize="14sp" android:text="@string/privacidad"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/filaNotificaciones" style="@style/FilaConfiguracion">
+                    <ImageView android:layout_width="44dp" android:layout_height="44dp" android:padding="11dp" android:background="@drawable/fondo_icono" android:src="@drawable/ic_notificaciones" android:importantForAccessibility="no"/>
+                    <TextView android:id="@+id/textoNotificaciones" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="14dp" android:fontFamily="@font/inter_bold" android:textColor="@color/texto" android:textSize="14sp" android:text="@string/notificaciones"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/filaIdioma" style="@style/FilaConfiguracion">
+                    <ImageView android:layout_width="44dp" android:layout_height="44dp" android:padding="11dp" android:background="@drawable/fondo_icono" android:src="@drawable/ic_idioma" android:importantForAccessibility="no"/>
+                    <TextView android:id="@+id/textoIdioma" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="14dp" android:fontFamily="@font/inter_bold" android:textColor="@color/texto" android:textSize="14sp" android:text="@string/idioma"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/filaQuickEscape" style="@style/FilaConfiguracion">
+                    <ImageView android:layout_width="44dp" android:layout_height="44dp" android:padding="11dp" android:background="@drawable/fondo_icono" android:src="@drawable/ic_escudo" android:importantForAccessibility="no"/>
+                    <TextView android:id="@+id/textoQuickEscape" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="14dp" android:fontFamily="@font/inter_bold" android:textColor="@color/texto" android:textSize="14sp" android:text="@string/quick_escape"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/filaAcerca" style="@style/FilaConfiguracion">
+                    <ImageView android:layout_width="44dp" android:layout_height="44dp" android:padding="11dp" android:background="@drawable/fondo_icono" android:src="@drawable/ic_info" android:importantForAccessibility="no"/>
+                    <TextView android:id="@+id/textoAcerca" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="14dp" android:fontFamily="@font/inter_bold" android:textColor="@color/texto" android:textSize="14sp" android:text="@string/acerca"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/filaAyuda" style="@style/FilaConfiguracion">
+                    <ImageView android:layout_width="44dp" android:layout_height="44dp" android:padding="11dp" android:background="@drawable/fondo_icono" android:src="@drawable/ic_ayuda" android:importantForAccessibility="no"/>
+                    <TextView android:id="@+id/textoAyuda" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="14dp" android:fontFamily="@font/inter_bold" android:textColor="@color/texto" android:textSize="14sp" android:text="@string/centro_ayuda"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <include layout="@layout/pie_navegacion"/>
+    </LinearLayout>
+    <include layout="@layout/vista_discreta"/>
+</FrameLayout>

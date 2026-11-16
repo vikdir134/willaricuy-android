@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- VistaDiscreta muestra esta capa y permite volver al contenido anterior. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/vistaDiscreta" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/pantalla_discreta" android:orientation="vertical" android:gravity="center" android:visibility="gone" android:clickable="true" android:focusable="true">
+    <Space android:layout_width="1dp" android:layout_height="0dp" android:layout_weight="1"/>
+    <TextView android:id="@+id/relojDiscreto" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/blanco" android:textSize="60sp"/>
+    <TextView android:id="@+id/fechaDiscreta" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textColor="#BFFFFFFF" android:textSize="15sp"/>
+    <Space android:layout_width="1dp" android:layout_height="0dp" android:layout_weight="1"/>
+    <TextView android:id="@+id/botonSalirDiscreto" android:layout_width="match_parent" android:layout_height="64dp" android:layout_marginBottom="24dp" android:gravity="center" android:text="@string/volver_discreto" android:textColor="#BFFFFFFF" android:textSize="12sp" android:clickable="true" android:focusable="true"/>
+</LinearLayout>

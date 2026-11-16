@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Los listeners de Inicio y Perfil se asignan desde las Activities. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="76dp" android:background="@color/blanco" android:orientation="horizontal" android:gravity="center">
+    <TextView android:id="@+id/botonInicio" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:padding="10dp" app:drawableTopCompat="@drawable/ic_inicio" android:drawablePadding="4dp" android:text="@string/inicio" android:textSize="12sp" android:textColor="@color/turquesa_oscuro" android:clickable="true" android:focusable="true" android:background="?attr/selectableItemBackground"/>
+    <TextView android:id="@+id/botonPerfil" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:padding="10dp" app:drawableTopCompat="@drawable/ic_perfil" android:drawablePadding="4dp" android:text="@string/perfil" android:textSize="12sp" android:textColor="@color/texto_secundario" android:clickable="true" android:focusable="true" android:background="?attr/selectableItemBackground"/>
+</LinearLayout>

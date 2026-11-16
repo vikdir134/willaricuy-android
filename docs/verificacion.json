@@ -1,0 +1,42 @@
+{
+  "fecha": "2026-11-16",
+  "version": "1.1",
+  "emulador": "Medium Phone API 37",
+  "paquete": "com.example.willaricuy",
+  "comprobaciones_correctas": [
+    "Inicio abre con sus dos acciones principales",
+    "Emergencia muestra únicamente el mensaje Prueba",
+    "Comunidad muestra únicamente el mensaje Prueba",
+    "Ocultar muestra la vista discreta desde Inicio",
+    "Atrás restaura Inicio desde la vista discreta",
+    "Perfil abre Configuración",
+    "Registro muestra únicamente el mensaje Prueba",
+    "Contactos muestra únicamente el mensaje Prueba",
+    "Guardar cierra el diálogo de privacidad",
+    "La preferencia de privacidad se conserva después de cerrar y abrir la app",
+    "Notificaciones permite revisar las tres preferencias locales",
+    "Idioma muestra la preferencia elegida",
+    "Ocultar también funciona desde Configuración",
+    "La barra de regreso restaura Configuración",
+    "El desplazamiento permite acceder a las opciones inferiores",
+    "Acerca de muestra únicamente el mensaje Prueba",
+    "Centro de ayuda muestra únicamente el mensaje Prueba",
+    "Quick Escape abre directamente la vista discreta",
+    "La navegación inferior vuelve a Inicio"
+  ],
+  "total": 19,
+  "compilacion": "assembleDebug: correcta",
+  "lint": "0 errors, 24 warnings",
+  "apk_sha256": "16a215d870dde3659e1153db58148916b44f082d7b37fd102bbfd7dabe16e20e",
+  "base_datos": {
+    "motor": "PostgreSQL 18",
+    "tablas": 23,
+    "relaciones_fk": 34,
+    "vistas": 3,
+    "restricciones_check": 49,
+    "sintaxis_postgresql": "correcta (pglast)",
+    "referencias_y_tipos_fk": "correctos",
+    "ejecutado_en_servidor": false,
+    "desplegado": false
+  }
+}

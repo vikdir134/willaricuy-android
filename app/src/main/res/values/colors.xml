@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Paleta compartida tomada del prototipo HTML. -->
+<resources>
+    <color name="turquesa">#4A9B8E</color>
+    <color name="turquesa_oscuro">#3A7E73</color>
+    <color name="turquesa_suave">#E3F1EF</color>
+    <color name="azul">#6E9FD1</color>
+    <color name="azul_suave">#E7F0FA</color>
+    <color name="salvia">#8FAE8B</color>
+    <color name="salvia_suave">#EDF3EC</color>
+    <color name="fondo">#FAF7F2</color>
+    <color name="tarjeta">#F3F0EA</color>
+    <color name="coral">#E0876F</color>
+    <color name="coral_oscuro">#A95540</color>
+    <color name="coral_suave">#F6E9E4</color>
+    <color name="emergencia">#FFF3A6</color>
+    <color name="comunidad">#BDD4EF</color>
+    <color name="boton_emergencia">#EAE09A</color>
+    <color name="boton_comunidad">#AEC3DC</color>
+    <color name="texto">#2B2B2B</color>
+    <color name="texto_secundario">#706B61</color>
+    <color name="blanco">#FFFFFF</color>
+    <color name="borde">#ECE7DE</color>
+    <color name="icono_inactivo">#7FA69C</color>
+    <color name="pantalla_discreta">#111111</color>
+</resources>

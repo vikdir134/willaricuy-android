@@ -1,0 +1,11 @@
+{
+  "motor": "PostgreSQL 18",
+  "tablas": 23,
+  "relaciones_fk": 34,
+  "vistas": 3,
+  "restricciones_check": 49,
+  "sintaxis_postgresql": "correcta (pglast)",
+  "referencias_y_tipos_fk": "correctos",
+  "ejecutado_en_servidor": false,
+  "desplegado": false
+}

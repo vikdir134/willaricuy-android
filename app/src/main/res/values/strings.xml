@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Willaricuy</string>
+    <string name="saludo">Hola.</string>
+    <string name="mensaje_seguridad">La alerta es silenciosa. Tu seguridad es primero.</string>
+    <string name="ocultar">Ocultar</string>
+    <string name="inicio">Inicio</string>
+    <string name="perfil">Perfil</string>
+    <string name="emergencia">EMERGENCIA</string>
+    <string name="comunidad">GUÍA Y COMUNIDAD</string>
+    <string name="emergencia_detalle">Obtén ayuda inmediata durante una situación de emergencia.</string>
+    <string name="comunidad_detalle">Encuentra orientación, recursos y una comunidad de apoyo.</string>
+    <string name="solicitar_ayuda">Solicitar ayuda ahora</string>
+    <string name="explorar_recursos">Explorar recursos</string>
+    <string name="volver_inicio">Volver al inicio</string>
+    <string name="usuario_anonimo">Usuario anónimo</string>
+    <string name="cuenta_protegida">Cuenta protegida, sin datos personales visibles</string>
+    <string name="registro_titulo">Regístrate o inicia sesión</string>
+    <string name="registro_detalle">Puedes pedir ayuda y revisar recursos sin registrarte. Más adelante podrás crear una cuenta para participar en la comunidad.</string>
+    <string name="registro_boton">Crear cuenta / Iniciar sesión</string>
+    <string name="contactos">Contactos de emergencia</string>
+    <string name="privacidad">Privacidad</string>
+    <string name="notificaciones">Notificaciones</string>
+    <string name="idioma">Idioma</string>
+    <string name="idioma_elegido">Idioma · %1$s</string>
+    <string name="quick_escape">Quick Escape</string>
+    <string name="acerca">Acerca de Willaricuy</string>
+    <string name="centro_ayuda">Centro de ayuda</string>
+    <string name="configuracion">Perfil y configuración</string>
+    <string name="aceptar">Entendido</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
+    <!-- Las opciones pendientes comparten este mensaje corto. -->
+    <string name="prueba">Prueba</string>
+    <string name="volver_discreto">Toca la barra para volver</string>
+    <string name="descripcion_logo">Logo de Willaricuy</string>
+    <string name="anonimato_foro">El foro mantendrá tu identidad oculta frente a otras personas.</string>
+    <string-array name="opciones_privacidad">
+        <item>Compartir ubicación durante emergencias</item>
+        <item>Guardar historial de alertas</item>
+    </string-array>
+    <string-array name="opciones_notificaciones">
+        <item>Alertas de emergencia</item>
+        <item>Actividad del foro</item>
+        <item>Recordatorios de bienestar</item>
+    </string-array>
+    <string-array name="opciones_idioma">
+        <item>Español</item>
+        <item>Quechua</item>
+        <item>English</item>
+    </string-array>
+    <string name="emoji_emergencia">🚨</string>
+    <string name="emoji_comunidad">🫂</string>
+</resources>

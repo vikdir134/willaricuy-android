@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Inicio combina encabezado, tarjetas y navegación; la vista discreta queda por encima. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/fondo">
+    <LinearLayout android:id="@+id/contenidoPantalla" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+        <include layout="@layout/encabezado"/>
+        <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true" android:clipToPadding="false">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingStart="18dp" android:paddingEnd="18dp" android:paddingBottom="12dp">
+                <TextView style="@style/TextoTitulo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginStart="4dp" android:text="@string/saludo"/>
+                <TextView style="@style/TextoCuerpo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_marginBottom="20dp" android:layout_marginStart="4dp" android:text="@string/mensaje_seguridad"/>
+                <LinearLayout android:id="@+id/tarjetaEmergencia" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="24dp" android:padding="22dp" android:gravity="center" android:orientation="vertical" android:background="@drawable/fondo_emergencia" android:elevation="3dp" android:clickable="true" android:focusable="true">
+                    <TextView android:layout_width="wrap_content" android:layout_height="52dp" android:gravity="center" android:text="@string/emoji_emergencia" android:textSize="38sp" android:importantForAccessibility="no"/>
+                    <TextView style="@style/TextoTitulo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:gravity="center" android:text="@string/emergencia"/>
+                    <TextView style="@style/TextoCuerpo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:gravity="center" android:textColor="@color/texto" android:lineSpacingExtra="3dp" android:text="@string/emergencia_detalle"/>
+                    <Button android:id="@+id/botonEmergencia" style="@style/BotonWillaricuy" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:background="@drawable/fondo_cta_emergencia" android:backgroundTint="@null" android:text="@string/solicitar_ayuda"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/tarjetaComunidad" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="24dp" android:padding="22dp" android:gravity="center" android:orientation="vertical" android:background="@drawable/fondo_comunidad" android:elevation="3dp" android:clickable="true" android:focusable="true">
+                    <TextView android:layout_width="wrap_content" android:layout_height="52dp" android:gravity="center" android:text="@string/emoji_comunidad" android:textSize="38sp" android:importantForAccessibility="no"/>
+                    <TextView style="@style/TextoTitulo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:gravity="center" android:text="@string/comunidad"/>
+                    <TextView style="@style/TextoCuerpo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:gravity="center" android:textColor="@color/texto" android:lineSpacingExtra="3dp" android:text="@string/comunidad_detalle"/>
+                    <Button android:id="@+id/botonComunidad" style="@style/BotonWillaricuy" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:background="@drawable/fondo_cta_comunidad" android:backgroundTint="@null" android:text="@string/explorar_recursos"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <include layout="@layout/pie_navegacion"/>
+    </LinearLayout>
+    <include layout="@layout/vista_discreta"/>
+</FrameLayout>
