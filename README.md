@@ -1,94 +1,37 @@
-# Willaricuy · Avance Android 1.1
+# Willaricuy
 
-Frontend nativo en Kotlin basado en el HTML final de Willaricuy. Conserva la estructura del ejemplo del profesor: un módulo `app`, Activities, layouts XML, recursos y archivos Gradle en Groovy.
+Aplicación Android de acompañamiento y ayuda ante situaciones de violencia, desarrollada en Kotlin con interfaces XML.
 
-## Guías para entender y exponer el avance
+## Funciones actuales
 
-- [Guía del avance](docs/GUIA_DEL_AVANCE.md): propósito, alcance, funcionamiento y modelo de datos.
-- [Recorrido del código](docs/RECORRIDO_DEL_CODIGO.md): qué archivo abrir y qué explicar de cada uno.
-- [Guion de exposición](docs/GUION_EXPOSICION.md): demostración de unos siete minutos y preguntas frecuentes.
-- [Documento para compartir](docs/Guia_del_avance_y_exposicion.pdf): explicación y guion en PDF.
-- [Modelo de datos](docs/base-datos/README.md): script, imagen y explicación de la propuesta de PostgreSQL.
-- Capturas: [Inicio](docs/capturas/Inicio.png), [Configuración](docs/capturas/Configuracion.png) y [Vista discreta](docs/capturas/Vista-discreta.png).
+- Pantalla de inicio con accesos a Emergencia y Guía y comunidad.
+- Perfil y configuración de privacidad, notificaciones e idioma, con preferencias guardadas en el teléfono.
+- Opción **Ocultar**, que muestra una vista discreta con fecha y hora.
 
-## Abrir y ejecutar en Android Studio
+El proyecto está en desarrollo. Emergencia, comunidad, registro y contactos muestran un mensaje de prueba. Las preferencias se guardan localmente; el idioma de la interfaz sigue siendo español. La conexión con un servidor, las alertas y la autenticación están pendientes.
 
-1. En Android Studio selecciona **File → Open** y elige la carpeta **WillaricuyAndroid**. Es la carpeta que contiene `settings.gradle`; no selecciones solamente `app`.
-2. Abre **Settings → Build, Execution, Deployment → Build Tools → Gradle**. En **Gradle JDK** selecciona **JDK 17**. Puedes elegir una instalación existente o usar **Download JDK** y descargar la versión 17.
-3. Sincroniza con **Sync Project with Gradle Files**. Si se solicita, instala **Android SDK Platform 32** desde SDK Manager. En otro equipo necesitarás Internet para descargar las herramientas y dependencias que falten.
-4. Selecciona la configuración **app**, elige un emulador o un teléfono con depuración USB y pulsa **Run ▶**.
+## Tecnologías
 
-El JDK integrado de una versión reciente de Android Studio puede ser más nuevo; elige explícitamente JDK 17 para este proyecto.
+Kotlin, layouts XML, AppCompat y SharedPreferences. Compatible con Android 5.0 (API 21) o superior.
 
-Android Studio administra `local.properties` con la ruta del SDK de cada equipo. Ese archivo y los resultados de compilación se excluyen de la copia ZIP.
+## Ejecutar el proyecto
 
-## Qué puedes revisar
+1. Abre la carpeta `WillaricuyAndroid` en Android Studio.
+2. Selecciona **JDK 17** en la configuración de Gradle e instala **Android SDK Platform 32**.
+3. Sincroniza el proyecto con Gradle.
+4. Selecciona un emulador o teléfono y pulsa **Run**.
 
-- **Inicio:** encabezado con logo y Ocultar, tarjetas Emergencia y Guía y comunidad, navegación inferior Inicio / Perfil.
-- **Perfil y configuración:** perfil anónimo, tarjeta de registro y opciones de contactos, privacidad, notificaciones, idioma, Quick Escape, información y ayuda. Puedes deslizar para ver las opciones inferiores.
-- **Privacidad y notificaciones:** selección y guardado en `SharedPreferences` del teléfono. Se conservan al cerrar y abrir la aplicación.
-- **Idioma:** guarda la preferencia y la muestra en la fila. Este avance mantiene sus textos en español.
-- **Ocultar:** muestra una vista discreta con fecha y hora. La barra inferior o Atrás restauran la pantalla anterior. Es una vista de la aplicación, no un bloqueo real del teléfono.
-
-Emergencia, comunidad, contactos, registro, Acerca de y Centro de ayuda muestran únicamente **Prueba** al pulsarlos. Quick Escape abre directamente la vista discreta. Guardar preferencias no muestra avisos emergentes adicionales. Esta entrega no envía alertas, no realiza llamadas y no autentica usuarios. No incluye servidor, conexión a PostgreSQL ni permisos de Internet o ubicación.
-
-## Organización del código
-
-```text
-WillaricuyAndroid/
-├── app/
-│   ├── build.gradle
-│   └── src/main/
-│       ├── AndroidManifest.xml
-│       ├── java/com/example/willaricuy/
-│       │   ├── MainActivity.kt
-│       │   ├── ConfiguracionActivity.kt
-│       │   └── VistaDiscreta.kt
-│       └── res/
-│           ├── drawable/         Iconos y fondos XML
-│           ├── drawable-nodpi/   Logo original del HTML
-│           ├── font/             Inter y Nunito
-│           ├── layout/           Pantallas y partes compartidas
-│           ├── values/           Textos, colores y estilos
-│           ├── values-v23/       Barras del sistema desde API 23
-│           ├── values-v27/       Barras del sistema desde API 27
-│           ├── values-night/
-│           └── xml/              Reglas de respaldo local
-├── gradle/wrapper/
-├── licencias/
-├── build.gradle
-├── settings.gradle
-└── gradlew.bat
-```
-
-El código Kotlin está dentro de `java/com/example/willaricuy`. El paquete, el namespace y el identificador de instalación son `com.example.willaricuy`. El nombre de la app y del proyecto es Willaricuy.
-
-Los elementos se obtienen con `findViewById`. Las Activities controlan la navegación y los diálogos; los XML contienen los diseños. Los textos, colores y estilos están centralizados en `res/values`. Hay comentarios breves en Kotlin para explicar el guardado local y el comportamiento compartido.
-
-## Versiones conservadas del ejemplo
-
-| Componente | Versión |
-| --- | --- |
-| Android Gradle Plugin | 7.3.1 |
-| Gradle Wrapper | 7.4 |
-| Kotlin | 1.7.20 |
-| compileSdk / targetSdk | 32 / 32 |
-| minSdk | 21 |
-| JDK para ejecutar Gradle | 17 |
-| Nivel de bytecode Java / Kotlin | 1.8 |
-
-Se mantienen estas versiones para continuar el proyecto académico con la misma base. Una actualización de herramientas se puede hacer por separado más adelante.
-
-## Verificación de esta entrega
-
-Se generó el APK de depuración con `assembleDebug` y se ejecutó `lintDebug` sin errores. Se revisaron las dos pantallas en un emulador Android API 37, la navegación, los diálogos, el guardado de preferencias tras reiniciar la app y la vista Ocultar. El APK es una compilación de depuración para revisar el avance.
-
-Para compilar desde PowerShell con JDK 17 seleccionado:
+Para generar el APK de depuración desde PowerShell con JDK 17 configurado:
 
 ```powershell
-.\gradlew.bat assembleDebug lintDebug
+.\gradlew.bat assembleDebug
 ```
 
-El resultado aparece en `app/build/outputs/apk/debug/app-debug.apk`.
+El APK se genera en `app/build/outputs/apk/debug/app-debug.apk`.
 
-Consulta `CAMBIOS_RESPECTO_AL_EJEMPLO.md` para ubicar cada modificación. Las licencias de las fuentes están en `licencias/`.
+## Estructura
+
+- `app/src/main/java/com/example/willaricuy/`: pantallas y comportamiento de la aplicación.
+- `app/src/main/res/`: diseños, textos, colores, imágenes y fuentes.
+- `gradle/`: configuración del Gradle Wrapper.
+- `licencias/`: licencias de las fuentes Inter y Nunito.
